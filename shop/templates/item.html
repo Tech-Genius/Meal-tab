@@ -1,0 +1,123 @@
+
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Meal-tab🥄 | Shop | {{product.title}}  {% endblock %}
+{% block content %}
+
+<style>
+    #shop {
+        /* color: #f26522 !important; */
+        border-radius: 5px;
+        background-color: #f26522;
+        width: fit-content !important;
+        padding: 12px !important;
+        box-shadow: 3px 3px 3px rgb(10, 8, 8);
+    }
+
+    #shop:hover {
+        color: white !important;
+        border: 1px solid #f26522;
+        background-color: transparent;
+        transition: 1s;
+    }
+</style>
+
+
+
+
+
+<!--  Zoom
+    id="zoom_01" data-zoom-image="{{ product.image.url }}"
+ -->
+
+<div class="item_wrapper">
+
+    <div class="color"></div>
+
+<div class="item_wrap">
+    <div class="item_box" id="img"  data-aos="fade-right" data-aos-duration="1200">
+        <img  src="{{ product.image.url }}" alt="">
+    </div>
+    <div class="item_box" id="text"  data-aos="fade-left" data-aos-duration="1200">
+          {% if old_price %}
+        <div class="content" id="has_promo">
+  
+        <h3>Product Name: {{product.title}}</h3>     
+       <h3>Normal Price: <del>{{product.price_before_discount}}</del></h3>
+       <h3>Percentage Off: {{product.percentage_off}}%</h3>
+       <h3>New Price: &#8358;{{product.price}}</h3>
+           <a href=""><button>Add to Cart <i class="fa fa-cart-plus"></i></button></a>
+       </div>
+
+
+     
+        {% else %}
+         <div class="content">
+
+        <h3>Product Name: {{product.title}}</h3>
+        <h3>Price: &#8358;{{product.price}}</h3>
+
+        <a href=""><button>Add to Cart <i class="fa fa-cart-plus"></i></button></a>
+       </div>
+          {% endif %}
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+<div class="product_wrapper" id="related_products">
+   <div class="text">
+    <h3 class="related_product_heading">Related Items</h3>
+   </div>
+<div class="product_inner" >
+  
+    {% for relate in related %}
+
+    <div class="l">
+        <a href="{% url 'item' relate.slug  %}">
+        <div class="product_box" data-aos="zoom-in-up" data-aos-duration="1200">
+            <img src="{{ relate.image.url}}" alt="">
+            <div class="text">
+               
+                <h3>{{relate.title}}</h3>
+                <p>&#8358;{{relate.price}}</p>
+                
+
+                <form action="">
+                    <div class="cart">
+                        <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </a>
+    </div>
+
+  
+
+    {% endfor %}
+
+   
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+{% endblock %}

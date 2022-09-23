@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Meal-tab🥄 | Shop | {{category.title}} {% endblock %}
+{% block content %}
+
+<style>
+    .active{
+        background-color: bisque;
+    }
+</style>
+
+<div class="shoppage-wrapper">
+    <div class="shop-wrapper">
+
+        <div class="shop-background1">
+
+
+            <h3 class="box">{{category.title}}</h3>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<div class="categories_wrapper">
+
+
+    <div class="categories_inner">
+        <div class="filter">
+            <p>Filter By <i class="fa fa-filter"></i></p>
+
+        </div>
+        {% for category in categories %}
+        <a href="{% url 'category' category.slug %}">
+            <div class="category_box">
+
+                <p>{{category.title}}</p>
+            </div>
+        </a>
+        {% endfor %}
+
+        <div class="icon">
+            <p> <i class="fa fa-bars"></i> </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="product_wrapper">
+
+    <div class="product_inner">
+{% if products %}
+
+        {% for product in products %}
+        <div class="l">
+            <a href="{% url 'item' product.slug  %}">
+            <div class="product_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                <img src="{{ product.image.url}}" alt="">
+                <div class="text">
+                    <h3>{{product.title}}</h3>
+                    <p>&#8358;{{product.price}}</p>
+                    <form action="">
+                        <div class="cart">
+                            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </a>
+        </div>
+
+        {% endfor %}
+
+        {% else %}
+
+        <div class="bx">
+            <h3>There are no products attached to this filter</h3>
+        </div>
+
+        {% endif %}
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,168 @@
+<style>
+    #shop {
+        /* color: #f26522 !important; */
+        border-radius: 5px;
+        background-color: #f26522;
+        width: fit-content !important;
+        padding: 12px !important;
+        box-shadow: 3px 3px 3px rgb(10, 8, 8);
+    }
+
+    #shop:hover {
+        color: white !important;
+        border: 1px solid #f26522;
+        background-color: transparent;
+        transition: 1s;
+    }
+</style>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Meal-tab🥄 | Shop {% endblock %}
+{% block content %}
+
+
+
+
+<div class="shoppage-wrapper">
+    <div class="shop-wrapper">
+
+        <div class="shop-background1">
+
+
+            <h3 class="box">Shop <i class="fa fa-shopping-bag"></i></h3>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<div class="small_screen_categories_wrapper">
+    <div class="small_categories_inner">
+        {% for category in categories %}
+
+
+        <div class="small_category_box">
+
+
+            <label class="filter_label" id="checked" tabindex="0">
+
+                {{category.title}}
+
+
+                <input type="checkbox" class="filter-tag" data-filter="category" value="{{category.id}}">
+                <span class="checkmark" id="checked"></span>
+            </label>
+
+        </div>
+
+
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+
+<div class="categories_wrapper">
+
+
+    <div class="categories_inner">
+        <div class="filter">
+            <p>Filter By <i class="fa fa-filter"></i></p>
+
+        </div>
+        {% for category in categories %}
+
+        <div class="category_box">
+
+
+            <label class="filter_label" id="checked" tabindex="0">
+
+                {{category.title}}
+
+
+                <input type="checkbox" class="filter-tag" data-filter="category" value="{{category.id}}">
+                <span class="checkmark" id="checked"></span>
+            </label>
+
+        </div>
+
+        {% endfor %}
+
+        <div class="icon">
+            <p> <i class="fa fa-bars"></i> </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="product_wrapper">
+
+    <div class="ajaxLoader">
+        <div class="ajaxLoaderInner">
+            
+        </div>
+    </div>
+    
+    <div class="product_inner" id="product_filtered">
+
+
+        {% for product in data %}
+        <div class="l">
+            <a href="{% url 'item' product.slug %}">
+                <div class="product_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                    <img src="{{ product.image.url}}" alt="">
+                    <div class="text">
+                        <h3>{{product.title}}</h3>
+                        <p>&#8358;{{product.price}}</p>
+                        <form action="">
+                            <div class="cart">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        {% endfor %}
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

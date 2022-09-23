@@ -1,0 +1,458 @@
+<style>
+    #home{
+      /* color: #f26522 !important; */
+      border-radius: 5px;
+      background-color: #f26522;
+      width: fit-content !important;
+      padding: 12px !important;
+      box-shadow: 3px 3px 3px  rgb(10, 8, 8);
+    }
+    #home:hover{
+        color: white !important;
+        border: 1px solid #f26522;
+        background-color: transparent;
+        transition: 1s;
+    }
+</style>
+{% extends 'base.html' %}
+
+{% block title %} Meal-tab🥄 | Home {% endblock %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+<div class="homepage-wrapper">
+    <div class="background-wrapper">
+
+        <div class="background1">
+            <div class="background1-boxes">
+                <div class="box" id="text" data-aos="fade-right" data-aos-duration="1200">
+                    <h3>Enjoy Our <br> Delicious Meal</h3>
+                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. <br>
+                        Clita erat ipsum et lorem et sit, sed stet lorem sit clita <br> duo justo magna dolore erat amet
+                    </p>
+                    <a href=""><button>Book A Table</button></a>
+                </div>
+                <div class="box" id="img" data-aos="fade-left" data-aos-duration="1200">
+                    <img src="{% static 'images/hero.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="promo">
+
+        <div class="hot-fire">
+            <h3 class="hot" style="text-align: center">Best Offers</h3> 
+
+            <!-- <h3 class="fire">🔥</h3> -->
+        </div>
+
+        <div class="promo_inner">
+            <div class="promo_box_wrapper">
+                {% for promo in promos %}
+                <a href="{% url 'item' promo.slug %}">
+                <div class="promo_block">
+                    
+                    
+                                            <div class="promo_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                        <img src="{{promo.image.url}}" alt="">
+
+
+                        <div class="promo-percentage">
+                            <h3>{{promo.percentage_off}}</h3>
+
+                            <div class="percent">
+                                <p><span>%</span></p>
+                                <p>Off</p>
+                            </div>
+
+                        </div>
+
+                        <div class="promo-title">
+                            <h4>{{promo.title}}</h4>
+                        </div>
+
+                        <div class="promo-days-left">
+                            <h4>{{promo.discount_days_left}} days Remaining </h4>
+                        </div>
+
+                    </div>
+
+                </div>
+                    </a>
+
+
+
+
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="menu_wrapper">
+
+        <div class="menu_top_text1">
+            <hr>
+            <p>Food Menu</p>
+            <hr>
+        </div>
+
+        <div class="menu_top_text2">
+            <h3>Most Popular Items</h3>
+        </div>
+
+        <div class="tab_head">
+
+            <div class="breakfast" tabindex="0">
+                <i class="fa fa-coffee"></i>
+                <div class="text">
+                    <p>Special</p>
+                    <h4>Breakfast</h4>
+                </div>
+            </div>
+
+            <div class="lunch" tabindex="1">
+                <i class="fa fa-spoon"></i>
+                <div class="text">
+                    <p>Popular</p>
+                    <h4>Lunch</h4>
+                </div>
+            </div>
+
+            <div class="dinner" tabindex="2">
+                <i class="fa fa-cutlery"></i>
+                <div class="text">
+                    <p>Lovely</p>
+                    <h4>Dinner</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- <div class="tab_head" id="small_screen">
+
+            <div class="breakfast" tabindex="0">
+                <i class="fa fa-coffee"></i>
+                <div class="text">
+                    <p>Special</p>
+                    <h4>Breakfast</h4>
+                </div>
+            </div>
+
+            <div class="lunch" tabindex="1">
+                <i class="fa fa-spoon"></i>
+                <div class="text">
+                    <p>Popular</p>
+                    <h4>Lunch</h4>
+                </div>
+            </div>
+
+            <div class="dinner" tabindex="2">
+                <i class="fa fa-cutlery"></i>
+                <div class="text">
+                    <p>Lovely</p>
+                    <h4>Dinner</h4>
+                </div>
+            </div>
+
+        </div> -->
+
+
+        <div class="menu_content" id="breakfast">
+            {% for breakfast in breakfasts %}
+            <div class="l">
+                <div class="menu_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                    <img src="{{breakfast.image.url}}" alt="">
+                    <div class="text">
+                        <h3>{{breakfast.title}}</h3>
+                        <!-- <p>&#8358;{{breakfast.price}}</p> -->
+                        <form action="">
+                            <div class="cart">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+
+
+
+
+        <div class="menu_content" id="lunch">
+            {% for lunch in lunchs %}
+            <div class="l">
+                <div class="menu_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                    <img src="{{lunch.image.url}}" alt="">
+                    <div class="text">
+                        <h3>{{lunch.title}}</h3>
+                        <!-- <p>&#8358;{{lunch.price}}</p> -->
+                        <form action="">
+                            <div class="cart">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+
+
+        <div class="menu_content" id="dinner">
+            {% for dinner in dinners %}
+            <div class="l">
+                <div class="menu_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                    <img src="{{dinner.image.url}}" alt="">
+                    <div class="text">
+                        <h3>{{dinner.title}}</h3>
+                        <!-- <p>&#8358;{{dinner.price}}</p> -->
+                        <form action="">
+                            <div class="cart">
+                                <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="how_it_works">
+        <h3>How Does It Work</h3>
+        <div class="how_it_works_holder">
+            <div class="how_it_works_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                <i class="fa fa-shopping-bag fa-spin"></i>
+
+                <h4>Select Order</h4>
+                <p>Check over hundreds of menus to pick your favorite food.</p>
+
+            </div>
+
+            <div class="how_it_works_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                <i class="fa fa-map-marker fa-spin"></i>
+
+                <h4>Enter Your Location</h4>
+                <p>Enter the location where your food should be delivered.</p>
+            </div>
+
+            <div class="how_it_works_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                <i class="fa fa-credit-card fa-spin"></i>
+
+                <h4>Make Payment </h4>
+                <p>It's quick, safe, and simple. Select several methods of payment.</p>
+            </div>
+
+            <div class="how_it_works_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                <i class="fa fa-birthday-cake fa-spin"></i>
+
+                <h4>Enjoy Your Meal</h4>
+                <p>Food is made and delivered directly to your requested location.</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="popular_wrapper">
+        <div class="popular">
+
+
+            <div class="popular_heading">
+
+                <h3>Ready For Delivery</h3>
+
+            </div>
+
+            <div class="inside">
+                <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+
+
+                    <div class="carousel-inner ">
+                        {% for popular in populars %}
+                        <div class="carousel-item {% if forloop.first %} active {% endif %}" data-bs-interval="10000">
+                            <div class="inners">
+                                <div class="innersPro">
+                                    <img src="{{popular.image.url}}" alt="">
+
+                                    <div class="popular_text_wrapper">
+                                        <div class="popular_text animate__animated animate__zoom">
+                                            <span class="name">{{popular.title}} @</span>
+                                            <p> &#8358;{{popular.price}}</p>
+                                            <a href="{% url 'item' popular.slug %}"><button>Order Now <i class="fa fa-angle-right"></i></button></a>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        {% endfor %}
+                    </div>
+
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="prev">
+                        <i class="fa fa-angle-left"></i>
+                        <span class="visually-hidden"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                        data-bs-slide="next">
+
+
+                        <i class="fa fa-angle-right"></i>
+                        <span class="visually-hidden"></span>
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="ad_lead_to_categories">
+
+        <div class="ad_lead_to_categories1">
+            <div class="ad_lead_box" id="text" data-aos="fade-right" data-aos-duration="1200">
+                <h3>Best deals <br> <span>Crispy Sandwiches</span></h3>
+                <p>Enjoy the large size of sandwiches. <br> Complete your meal with the perfect slice of sandwiches.</p>
+                <a href="{% url 'shop' %}"><button>Proceed To Order <i class="fa fa-angle-right"></i></button></a>
+            </div>
+            <div class="ad_lead_box" data-aos="fade-left" data-aos-duration="1200" id="img">
+                <img src="{% static 'images/crispy-sandwiches.png' %}" alt="">
+            </div>
+
+
+        </div>
+
+        <div class="ad_lead_to_categories2">
+
+            <div class="ad_lead_box" data-aos="fade-right" data-aos-duration="1200" id="img">
+                <img src="{% static 'images/fried-chicken.png' %}" alt="">
+            </div>
+
+            <div class="ad_lead_box" id="text" data-aos="fade-left" data-aos-duration="1200">
+                <h3>Celebrate parties <br> with <span>Fried Chicken</span></h3>
+                <p>Get the best fried chicken smeared with a lip smacking <br> lemon chili flavor. Check out best deals
+                    for fried chicken.</p>
+                <a href="{% url 'shop' %}"><button>Proceed To Order <i class="fa fa-angle-right"></i></button></a>
+            </div>
+
+        </div>
+
+        <div class="ad_lead_to_categories3">
+            <div class="ad_lead_box" id="text" data-aos="fade-right" data-aos-duration="1200">
+                <h3>Wanna eat hot & <br> <span>spicy Pizza?</span></h3>
+                <p>Pair up with a friend and enjoy the hot and crispy <br> pizza pops. Try it with the best deals.</p>
+                <a href="{% url 'shop' %}"><button>Proceed To Order <i class="fa fa-angle-right"></i></button></a>
+            </div>
+            <div class="ad_lead_box" data-aos="fade-left" data-aos-duration="1200" id="img">
+                <img src="{% static 'images/pizza.png' %}" alt="">
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="chefs_wrapper">
+        <div class="text">
+            <h3>Our Master Chefs</h3>
+        </div>
+        <div class="chefs_inner">
+            {% for chef in chefs %}
+           
+            <div class="chefs_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                <div class="chef_image">
+                    <img src="{{chef.image.url}}" alt="">
+                </div>
+                <h3>{{chef.name}}</h3>
+
+                <p>{{chef.position}}</p>
+
+                <div class="social" data-aos="fade-in" data-aos-duration="1200">
+                    <a href="https://{{chef.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>
+                  <a href="https://{{chef.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://{{chef.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+{% endblock content %}

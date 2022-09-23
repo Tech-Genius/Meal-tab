@@ -1,0 +1,242 @@
+<style>
+    #reservation {
+        /* color: #f26522 !important; */
+        border-radius: 5px;
+        background-color: #f26522;
+        width: fit-content !important;
+        padding: 12px !important;
+        box-shadow: 3px 3px 3px rgb(10, 8, 8);
+    }
+
+    #reservation:hover {
+        color: white !important;
+        border: 1px solid #f26522;
+        background-color: transparent;
+        transition: 1s;
+    }
+</style>
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+{% if message_name %}
+
+Meal-tab🥄 | Form Submitted
+
+{% else %}
+
+Meal-tab🥄 | Event Reservation
+
+{% endif %}
+
+{% endblock %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="reservationpage-wrapper">
+    <div class="reservation-wrapper">
+
+        <div class="reservation-background1">
+
+{% if message_name %}
+            <div class="reserve_box_for_filled_form" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="500">
+                <div class="box" id="img">
+                    <img src="{% static 'images/password-reset-complete.png' %}" alt="">
+                </div>
+
+                <div class="box" id="text">
+                    <h3> Hello {{message_name}}, your Request for Event Reservation have been noted by our staffs, we'll get in touch with you soon, <br> Thank You.</h3>
+                <a href="{% url 'shop' %}"><button>Go To Shop <i class="fa fa-cart-plus" aria-hidden="true"></i> </button></a>
+                </div>
+        
+            </div>
+
+{% else %}
+
+
+            <div class="reserve_box">
+
+                <section class="myform-area">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+
+                                <div class="form-area book-event-form" id="event">
+
+
+                                    <div class="form-content" data-aos="fade-right" data-aos-duration="1200">
+                                        <img src="{% static 'images/chef-311680.png' %}" alt="">
+
+                                    </div>
+
+
+
+
+                                    <div class="form-input" data-aos="fade-left" data-aos-duration="1200">
+                                        <div class="form-wrap">
+                                            <h2>Fill The Form Below To Reserve Our Chefs For Your Event</h2>
+                                            <form method="POST" action="{% url 'event-reservation' %}">
+
+
+
+                                                {% csrf_token %}
+
+
+                                                <div class="form-group">
+                                                    <input type="text" id="" name="name" required>
+
+                                                    <label>Full Name</label>
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    <input type="email" id="" name="email" required>
+                                                    <label>Email</label>
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    <input type="tel" id="" name="phone" required>
+                                                    <label>Phone</label>
+                                                </div>
+
+
+                                                <div class="form-group">
+
+                                                    <input type="date" id="" name="date" required>
+                                                    <label>Date</label>
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    <input type="address" id="" name="address" required>
+                                                    <label>Event Location</label>
+                                                </div>
+
+                                                <div class="form-group">
+
+                                                    <input type="number" id="" name="guests" required>
+                                                    <label>How Many Guests</label>
+
+                                                </div>
+
+
+
+
+
+
+
+                                                <div class="myform-button">
+                                                    <button class="myform-btn" type="submit">Submit</button>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+
+{% endif %}
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

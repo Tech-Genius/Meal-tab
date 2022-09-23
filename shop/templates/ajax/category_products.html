@@ -1,0 +1,24 @@
+{% for product in data %}
+<div class="l">
+  <a href="{% url 'item' product.slug %}">
+    <div class="product_box">
+        <img src="{{ product.image.url}}" alt="">
+        <div class="text">
+            <h3>{{product.title}}</h3>
+            <p>&#8358;{{product.price}}</p>
+            <form action="">
+                <div class="cart">
+                    <i class="fa fa-cart-plus" aria-hidden="true"></i>
+                </div>
+            </form>
+        </div>
+    </div>
+  </a>
+</div>
+
+{% endfor %}
+
+
+
+
+
