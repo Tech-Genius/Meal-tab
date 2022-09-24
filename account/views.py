@@ -45,7 +45,7 @@ def signin(request):
 
 def userlogout(request):
     logout(request)
-    return redirect('home')
+    return redirect('login')
 
 
         

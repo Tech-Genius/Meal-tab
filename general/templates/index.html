@@ -1,13 +1,14 @@
 <style>
-    #home{
-      /* color: #f26522 !important; */
-      border-radius: 5px;
-      background-color: #f26522;
-      width: fit-content !important;
-      padding: 12px !important;
-      box-shadow: 3px 3px 3px  rgb(10, 8, 8);
+    #home {
+        /* color: #f26522 !important; */
+        border-radius: 5px;
+        background-color: #f26522;
+        width: fit-content !important;
+        padding: 12px !important;
+        box-shadow: 3px 3px 3px rgb(10, 8, 8);
     }
-    #home:hover{
+
+    #home:hover {
         color: white !important;
         border: 1px solid #f26522;
         background-color: transparent;
@@ -32,10 +33,11 @@
             <div class="background1-boxes">
                 <div class="box" id="text" data-aos="fade-right" data-aos-duration="1200">
                     <h3>Enjoy Our <br> Delicious Meal</h3>
-                    <p>Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. <br>
-                        Clita erat ipsum et lorem et sit, sed stet lorem sit clita <br> duo justo magna dolore erat amet
+                    <p>Our delivery team is ever ready to deliver your favourite meals to your door step anytime, any
+                        day.
                     </p>
-                    <a href=""><button>Book A Table</button></a>
+                    <a href=""><button>Visit Our Shop <i class="fa fa-cart-plus" aria-hidden="true"
+                                style="font-size: 21px;"></i></button></a>
                 </div>
                 <div class="box" id="img" data-aos="fade-left" data-aos-duration="1200">
                     <img src="{% static 'images/hero.png' %}" alt="">
@@ -48,48 +50,142 @@
 
 
 
+    <div class="ad_lead_to_promo">
+        <div class="ad_lead_to_promo_inner">
 
-    <div class="promo">
+            <div class="ad_lead_to_promo_box" id="img">
+                <img id="large_screen" src="{% static 'images/chef-pointing-lateral-white-background.jpg' %}" alt="" data-aos="fade-right"
+                    data-aos-duration="1200">
+                
+                    <img id="small_screen" src="{% static 'images/chef-presenting-something-white-background.jpg' %}" alt="">
+           
+            </div>
+            <div class="ad_lead_to_promo_box" id="text" data-aos="fade-left" data-aos-duration="1200">
+                <h3>Enjoy <span>Mouth Watering</span> <br> Discounts On Our <br> <span>Best Deals</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laborum velit corrupti voluptas
+                    numquam libero id odit nisi, quod consequuntur.</p>
+                    <div class="ad_auth_button">
+                <a href="#promo"><button data-aos="fade-up" data-aos-duration="1200">View Discounts</button></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    <div class="ad_lead_to_auth">
+        <div class="ad_lead_to_auth_inner">
+
+
+            <div class="ad_lead_to_auth_box" id="text" data-aos="fade-right" data-aos-duration="1200">
+                <h3>Get <span>Authenticated</span> <br> To Enjoy Your <br> <span>Shopping</span></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laborum velit corrupti voluptas
+                    numquam libero id odit nisi, quod consequuntur.</p>
+
+                <div class="ad_auth_button">
+                    <a href="{% url 'signup' %}"><button data-aos="fade-up" data-aos-duration="1200">Sign Up</button></a>
+                    <a href="{% url 'login' %}"><button data-aos="fade-up" data-aos-duration="1200">Sign In</button></a>
+                </div>
+            </div>
+
+
+            <div class="ad_lead_to_auth_box" id="img">
+                <img id="large_screen" src="{% static 'images/signup-login.png' %}" alt="" data-aos="fade-left"
+                    data-aos-duration="1200">
+
+                    <img id="small_screen" src="{% static 'images/chef-with-his-arms-crossed-white-background_1368-22244-removebg-preview.png' %}" alt="">
+            </div>
+
+            
+        </div>
+    </div>
+
+
+
+
+
+    <div class="ad_lead_to_promo">
+        <div class="ad_lead_to_promo_inner">
+
+            <div class="ad_lead_to_promo_box" id="img">
+                <img  src="{% static 'images/chef-making-ok-sign-white-background.jpg' %}" alt="" data-aos="fade-right"
+                    data-aos-duration="1200">
+                
+                    <!-- <img id="small_screen" src="{% static 'images/chef-presenting-something-white-background.jpg' %}" alt="">
+            -->
+            </div>
+            <div class="ad_lead_to_promo_box" id="text" data-aos="fade-left" data-aos-duration="1200">
+                <h3>Reserve  <span>A Table</span> <br> Or Reserve Our Chefs <br> <span>For Your Event</span></h3>
+                <p>Book a table in our restaurant and come at your own to enjoy your meal. You can also reserve our our top notch chefs for your <br>upcoming events.
+                    </p>
+
+                    <div class="ad_auth_button">
+                        <a href="{% url 'table-reservation' %}"><button data-aos="fade-up" data-aos-duration="1200">Book Table</button></a>
+                        <a href="{% url 'event-reservation' %}"><button data-aos="fade-up" data-aos-duration="1200">Book Event</button></a>
+                    </div>
+                </div>       
+
+          </div>
+        </div>
+    </div>
+    
+  
+
+
+
+
+
+
+    <div class="promo"><a name="promo"></a>
 
         <div class="hot-fire">
-            <h3 class="hot" style="text-align: center">Best Offers</h3> 
+            <h3 class="hot" style="text-align: center">Best Offers</h3>
 
             <!-- <h3 class="fire">🔥</h3> -->
+        </div>
+
+
+        <div class="promo_top_text1">
+            <hr>
+            <p>From Our Shop</p>
+            <hr>
         </div>
 
         <div class="promo_inner">
             <div class="promo_box_wrapper">
                 {% for promo in promos %}
                 <a href="{% url 'item' promo.slug %}">
-                <div class="promo_block">
-                    
-                    
-                                            <div class="promo_box" data-aos="zoom-in-up" data-aos-duration="1200">
-                        <img src="{{promo.image.url}}" alt="">
+                    <div class="promo_block">
 
 
-                        <div class="promo-percentage">
-                            <h3>{{promo.percentage_off}}</h3>
+                        <div class="promo_box" data-aos="zoom-in-up" data-aos-duration="1200">
+                            <img src="{{promo.image.url}}" alt="">
 
-                            <div class="percent">
-                                <p><span>%</span></p>
-                                <p>Off</p>
+
+                            <div class="promo-percentage">
+                                <h3>{{promo.percentage_off}}</h3>
+
+                                <div class="percent">
+                                    <p><span>%</span></p>
+                                    <p>Off</p>
+                                </div>
+
+                            </div>
+
+                            <div class="promo-title">
+                                <h4>{{promo.title}}</h4>
+                            </div>
+
+                            <div class="promo-days-left">
+                                <h4>{{promo.discount_days_left}} days Remaining </h4>
                             </div>
 
                         </div>
 
-                        <div class="promo-title">
-                            <h4>{{promo.title}}</h4>
-                        </div>
-
-                        <div class="promo-days-left">
-                            <h4>{{promo.discount_days_left}} days Remaining </h4>
-                        </div>
-
                     </div>
-
-                </div>
-                    </a>
+                </a>
 
 
 
@@ -318,7 +414,8 @@
                                         <div class="popular_text animate__animated animate__zoom">
                                             <span class="name">{{popular.title}} @</span>
                                             <p> &#8358;{{popular.price}}</p>
-                                            <a href="{% url 'item' popular.slug %}"><button>Order Now <i class="fa fa-angle-right"></i></button></a>
+                                            <a href="{% url 'item' popular.slug %}"><button>Order Now <i
+                                                        class="fa fa-angle-right"></i></button></a>
 
                                         </div>
                                     </div>
@@ -417,7 +514,7 @@
         </div>
         <div class="chefs_inner">
             {% for chef in chefs %}
-           
+
             <div class="chefs_box" data-aos="zoom-in-up" data-aos-duration="1200">
                 <div class="chef_image">
                     <img src="{{chef.image.url}}" alt="">
@@ -428,7 +525,7 @@
 
                 <div class="social" data-aos="fade-in" data-aos-duration="1200">
                     <a href="https://{{chef.facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>
-                  <a href="https://{{chef.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="https://{{chef.twitter}}" target="_blank"><i class="fa fa-twitter"></i></a>
                     <a href="https://{{chef.instagram}}" target="_blank"><i class="fa fa-instagram"></i></a>
                 </div>
             </div>

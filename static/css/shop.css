@@ -149,7 +149,7 @@ padding-left: 15px;
   }
 
   .filter_label:focus  {
-    background-color: rgb(202, 13, 13);
+    background-color: #f26522;
   }
 
 
@@ -208,11 +208,11 @@ padding-left: 15px;
 
 .categories_inner .icon p{
     border-radius: 10px;
-    border: 1px #07315B solid;
+    /* border: 1px #07315B solid; */
     width: fit-content;
     padding: 10px 30px;
    
-    box-shadow: 1px 1px 1px grey;
+    box-shadow: 3px 3px 3px grey;
     color: #07315B;
     font: 17px "raleway-heavy", sans-serif;
     font-weight: 550;

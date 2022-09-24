@@ -14,10 +14,10 @@
     position: relative;
     height: fit-content;
     width: 100%;
-
     padding-top: 100px;
     /* margin-bottom: 20px; */
     /* display: grid; */
+    padding-bottom: 100px;
 }
 
 .reservation-background1::before {
