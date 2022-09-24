@@ -234,10 +234,10 @@ font-family: 'Oswald', sans-serif;
 
 .ad_lead_to_auth_box{
  width: 75%;
- justify-self: center;
+ 
 }
 .ad_lead_to_auth_inner #img{
- width: fit-content;
+ width: auto;
 }
 .ad_lead_to_auth_box img{
     /* width: 100%; */
@@ -1400,9 +1400,12 @@ justify-self: center;
 
     .background1-boxes{
         grid-template-columns:  1fr;
+        padding-top: 90px;
+        padding-bottom: 30px;
     }
     .background1{
         height: fit-content;
+        
     }
     .background1-boxes #img{
 width: fit-content;
@@ -1433,12 +1436,13 @@ justify-self: center;
 
 @media screen and (max-width:810px){
   
-    .ad_lead_to_promo_box{
-        width: 80%;
+    .ad_lead_to_promo_box, .ad_lead_to_auth_box{
+        width: 85%;
         /* text-align: center; */
     }
     .ad_lead_to_promo_inner, .ad_lead_to_auth_inner{
         grid-template-columns: 1fr;
+        margin-top:50px;
     }
     .ad_lead_to_promo_inner #large_screen, .ad_lead_to_auth_inner #large_screen{
         display: none;
@@ -1448,6 +1452,7 @@ justify-self: center;
     }
     .ad_lead_to_auth_inner #img{
         grid-row: 1;
+        justify-self: start !important;
     }
     .ad_lead_to_promo_inner img, .ad_lead_to_auth_inner img{
         height: 300px;
@@ -1455,6 +1460,10 @@ justify-self: center;
     .ad_lead_to_promo_box, .ad_lead_to_auth_box{
         justify-self: center !important;
        }
+
+       .ad_auth_button button{
+       width: 140px;
+    }
        
  
     /* .ad_lead_to_promo_box img{
@@ -1574,8 +1583,11 @@ justify-self: center;
     .ad_lead_to_promo_inner{
         margin-top: 20px;
     }
-    .ad_auth_button button{
+     .ad_auth_button button{
         flex-wrap: nowrap;
+        width: 120px;
+    }
+    .ad_lead_to_promo_box #first_button button{
         width: 150px;
     }
 }
