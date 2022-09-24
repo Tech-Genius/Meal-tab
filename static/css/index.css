@@ -1464,6 +1464,10 @@ justify-self: center;
        .ad_auth_button button{
        width: 140px;
     }
+
+    .ad_lead_to_promo_inner #text, .ad_lead_to_auth_inner #text{
+        margin-top: 20px;
+    }
        
  
     /* .ad_lead_to_promo_box img{
@@ -1494,6 +1498,9 @@ justify-self: center;
     .ad_lead_to_categories #text h3{
         font-family: 'Oswald', sans-serif;
         font-size: 25px;  
+    }
+    .ad_lead_to_promo_box h3, .ad_lead_to_auth_box h3{
+        font-size: 25px;
     }
 
     .inners{
@@ -1526,6 +1533,24 @@ justify-self: center;
         grid-template-columns: 1fr;
     }
 }
+
+
+@media screen and (max-width:635px){
+
+    .promo_box{
+        margin: 25px auto;
+
+    }
+    .promo-percentage{
+        width: 100px;
+    }
+    .how_it_works_holder{
+        grid-template-columns: 1fr;
+    }
+
+ 
+}
+
 
 
 @media screen and (max-width:530px){
@@ -1562,7 +1587,7 @@ justify-self: center;
         
     }
     .ad_lead_to_promo_inner img, .ad_lead_to_auth_inner img{
-        height: 240px;
+        height: 230px;
     }
 }
 
@@ -1577,9 +1602,7 @@ justify-self: center;
     .background1-boxes #text h3{
         font-size: 35px;
     }
-    .ad_lead_to_promo_box h3, .ad_lead_to_auth_box h3{
-        font-size: 30px;
-    }
+
     .ad_lead_to_promo_inner{
         margin-top: 20px;
     }
@@ -1593,20 +1616,5 @@ justify-self: center;
 }
 
 
-@media screen and (max-width:635px){
-
-    .promo_box{
-        margin: 25px auto;
-
-    }
-    .promo-percentage{
-        width: 100px;
-    }
-    .how_it_works_holder{
-        grid-template-columns: 1fr;
-    }
-
- 
-}
 
 
