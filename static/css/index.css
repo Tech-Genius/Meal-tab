@@ -197,6 +197,7 @@ font-family: 'Oswald', sans-serif;
 
 .ad_lead_to_promo_box #small_screen{
     display: none;
+    width: auto;
 }
 
 /* ad_lead_to_promo_inner */
@@ -213,13 +214,14 @@ font-family: 'Oswald', sans-serif;
 
 .ad_lead_to_auth_box #small_screen{
     display: none;
+    width: auto;
 }
 
 
 .ad_lead_to_auth_inner{
     display: grid;
     /* flex-wrap: wrap; */
-    justify-content: center;
+   
     grid-template-columns: 1fr 1fr;
     margin-top: 100px;
     padding: 30px 0px;
@@ -274,8 +276,11 @@ font-family: 'Oswald', sans-serif;
     transition: all .5s;
     box-shadow: 3px 3px 3px  rgb(10, 8, 8);
 }
+.ad_auth_button #brown{
+    background:linear-gradient(#f15005ee, #832b03) ;
+}
 .ad_lead_to_auth_box button:hover{
-    opacity: 0;
+    opacity: 0.9;
 }
 
 
@@ -1437,8 +1442,12 @@ justify-self: center;
 @media screen and (max-width:810px){
   
     .ad_lead_to_promo_box, .ad_lead_to_auth_box{
-        width: 85%;
-        /* text-align: center; */
+        width: 90%;
+        text-align: center;
+        justify-self: center;
+        justify-content: center;
+        display: grid;
+       
     }
     .ad_lead_to_promo_inner, .ad_lead_to_auth_inner{
         grid-template-columns: 1fr;
@@ -1452,7 +1461,7 @@ justify-self: center;
     }
     .ad_lead_to_auth_inner #img{
         grid-row: 1;
-        justify-self: start !important;
+    
     }
     .ad_lead_to_promo_inner img, .ad_lead_to_auth_inner img{
         height: 300px;
@@ -1460,9 +1469,15 @@ justify-self: center;
     .ad_lead_to_promo_box, .ad_lead_to_auth_box{
         justify-self: center !important;
        }
+    .ad_lead_to_auth_box p{
+        width: auto;
+    }
 
        .ad_auth_button button{
        width: 140px;
+    }
+    .ad_auth_button{
+        justify-content: center;
     }
 
     .ad_lead_to_promo_inner #text, .ad_lead_to_auth_inner #text{
