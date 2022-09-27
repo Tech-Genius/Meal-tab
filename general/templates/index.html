@@ -206,7 +206,7 @@
 
 
 
-    <div class="menu_wrapper">
+    <!-- <div class="menu_wrapper">
 
         <div class="menu_top_text1">
             <hr>
@@ -246,35 +246,7 @@
 
         </div>
 
-        <!-- <div class="tab_head" id="small_screen">
-
-            <div class="breakfast" tabindex="0">
-                <i class="fa fa-coffee"></i>
-                <div class="text">
-                    <p>Special</p>
-                    <h4>Breakfast</h4>
-                </div>
-            </div>
-
-            <div class="lunch" tabindex="1">
-                <i class="fa fa-spoon"></i>
-                <div class="text">
-                    <p>Popular</p>
-                    <h4>Lunch</h4>
-                </div>
-            </div>
-
-            <div class="dinner" tabindex="2">
-                <i class="fa fa-cutlery"></i>
-                <div class="text">
-                    <p>Lovely</p>
-                    <h4>Dinner</h4>
-                </div>
-            </div>
-
-        </div> -->
-
-
+       
         <div class="menu_content" id="breakfast">
             {% for breakfast in breakfasts %}
             <div class="l">
@@ -282,7 +254,7 @@
                     <img src="{{breakfast.image.url}}" alt="">
                     <div class="text">
                         <h3>{{breakfast.title}}</h3>
-                        <!-- <p>&#8358;{{breakfast.price}}</p> -->
+                     
                         <form action="">
                             <div class="cart">
                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
@@ -306,7 +278,7 @@
                     <img src="{{lunch.image.url}}" alt="">
                     <div class="text">
                         <h3>{{lunch.title}}</h3>
-                        <!-- <p>&#8358;{{lunch.price}}</p> -->
+                    
                         <form action="">
                             <div class="cart">
                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
@@ -328,7 +300,7 @@
                     <img src="{{dinner.image.url}}" alt="">
                     <div class="text">
                         <h3>{{dinner.title}}</h3>
-                        <!-- <p>&#8358;{{dinner.price}}</p> -->
+                 
                         <form action="">
                             <div class="cart">
                                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
@@ -342,7 +314,7 @@
 
 
     </div>
-
+ -->
 
 
 
@@ -540,6 +512,125 @@
     </div>
 
 
+
+
+
+
+
+
+    <div class="contacsection-wrapper">
+        <div class="contact-wrapper">
+    
+            <div class="contact-background1">
+    
+    
+    
+                {% if message_name %}
+                <div class="contact_box_for_filled_form" data-aos="zoom-in-down" data-aos-duration="1000"
+                    data-aos-delay="500">
+                    <div class="box" id="img">
+                        <img src="{% static 'images/password-reset-complete.png' %}" alt="">
+                    </div>
+    
+                    <div class="box" id="text">
+                        <h3> Hello {{message_name}}, your Request for Table Reservation have been noted by our staffs, we'll
+                            get in
+                            touch with you soon, <br> Thank You.</h3>
+                        <a href="{% url 'shop' %}"><button>Go To Shop <i class="fa fa-cart-plus" aria-hidden="true"></i> </button></a>
+                    </div>
+    
+                </div>
+    
+                {% else %}
+    
+    
+    
+    
+    <div class="contact_heading">
+        <h3>Contact Us</h3>
+        <p>DO you have any complain, a review, or you want to talk to the management directly, this section is for you. </p>
+    </div>
+    
+                <div class="contact_box">
+    
+                    <section class="myform-area">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+    
+                                    <div class="form-area login-form">
+    
+    
+                                        <div class="form-content" data-aos="fade-right" data-aos-duration="1200">
+                                            <img src="{% static 'images/chef-311680.png' %}" alt="">
+    
+                                        </div>
+    
+    
+    
+    
+                                        <div class="form-input" data-aos="fade-left" data-aos-duration="1200">
+                                            <div class="form-wrap">
+                                                <h2>Fill The Form Below To Contact The Management.</h2>
+                                                <form method="POST">
+                    
+    
+                                                    {% csrf_token %}
+                                                                                   
+    
+                                                    <div class="form-group">
+                                                        <input type="text" id="" value="{{request.user.username}}" name="name" required>
+    
+                                                        <label>Full Name</label>
+                                                    </div>
+    
+                                                    <div class="form-group">
+    
+                                                        <input type="email" id="" value="{{request.user.email}}" name="email" required>
+                                                        <label>Email</label>
+                                                    </div>
+    
+    
+                                                    <div class="form-group">
+                                                        <input type="tel" id="" name="phone" required>
+                                                        <label>Phone</label>
+                                                    </div>
+    
+    
+    
+    
+                                                    <div class="form-group">
+    
+                                                        <input type="text" id="" name="user_message" required>
+                                                        <label>Your Message</label>
+                                                    </div>
+    
+    
+    
+    
+    
+                                                    <div class="myform-button">
+                                                        <button class="myform-btn" type="submit">Send Message</button>
+                                                    </div>
+    
+                                                </form>
+                                            </div>
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
+    
+                </div>
+    
+    
+    
+                {% endif %}
+            </div>
+    
 
 
 

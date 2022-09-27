@@ -5,6 +5,66 @@
 -----------------------------------------------------------------------------------*/  
 
 
+
+
+$(document).ready(function(){
+	$(".breakfast").on('click', function(){
+
+        $(".lunch").css("border-bottom", "none")
+		$(".dinner").css("border-bottom", "none")
+		$(".breakfast").css("border-bottom", "2px solid #f26522")
+		$("#lunch").hide();
+		$("#dinner").hide();
+		$('#breakfast').show();
+		$("#breakfast").css("display", "grid");
+	
+	  
+	})
+
+
+
+
+
+
+    $(".lunch").on('click', function(){
+        
+        
+        $(".breakfast").css("border-bottom", "none")
+		$(".dinner").css("border-bottom", "none")
+		$(".lunch").css("border-bottom", "2px solid #f26522")
+        $("#breakfast").hide();
+		$("#dinner").hide();
+		$("#lunch").show();
+		$("#lunch").css("display", "grid");
+    //    $(".packer, .foot_packer").fadeOut("slow");
+    //    $(".list_box").toggle("slow");
+    //   //  $(".head_side").css("padding-top", "200px");
+      
+   })
+
+
+   $(".dinner").on('click', function(){
+
+	$(".breakfast").css("border-bottom", "none")
+	$(".lunch").css("border-bottom", "none")
+	$(".dinner").css("border-bottom", "2px solid #f26522")    
+	$("#breakfast").hide();
+	$("#lunch").hide();
+	$('#dinner').show();
+	$("#dinner").css("display", "grid");
+
+  
+})
+      });
+ 
+
+
+
+
+
+
+
+
 /**
  * --------------------------------------------------------------------------
  * Bootstrap (v4.0.0-alpha.6): util.js
@@ -810,16 +870,15 @@ $(".menu_wrapper").mouseleave(function(){
 
 
 
-
 $(document).ready(function(){
-	$(".breakfast").click(function(){
+	$(".breakfast").on('click', function(){
 
         $(".lunch").css("border-bottom", "none")
 		$(".dinner").css("border-bottom", "none")
 		$(".breakfast").css("border-bottom", "2px solid #f26522")
 		$("#lunch").hide();
 		$("#dinner").hide();
-		$('#breakfast').slideToggle("slow");
+		$('#breakfast').show();
 		$("#breakfast").css("display", "grid");
 	
 	  
@@ -830,7 +889,7 @@ $(document).ready(function(){
 
 
 
-    $(".lunch").click(function(){
+    $(".lunch").on('click', function(){
         
         
         $(".breakfast").css("border-bottom", "none")
@@ -838,7 +897,7 @@ $(document).ready(function(){
 		$(".lunch").css("border-bottom", "2px solid #f26522")
         $("#breakfast").hide();
 		$("#dinner").hide();
-		$("#lunch").slideToggle("slow");
+		$("#lunch").show();
 		$("#lunch").css("display", "grid");
     //    $(".packer, .foot_packer").fadeOut("slow");
     //    $(".list_box").toggle("slow");
@@ -847,20 +906,31 @@ $(document).ready(function(){
    })
 
 
-   $(".dinner").click(function(){
+   $(".dinner").on('click', function(){
 
 	$(".breakfast").css("border-bottom", "none")
 	$(".lunch").css("border-bottom", "none")
 	$(".dinner").css("border-bottom", "2px solid #f26522")    
 	$("#breakfast").hide();
 	$("#lunch").hide();
-	$('#dinner').slideToggle("slow");
+	$('#dinner').show();
 	$("#dinner").css("display", "grid");
 
   
 })
       });
  
+
+
+
+
+
+
+
+
+
+
+
  
 
 

@@ -11,6 +11,21 @@ from meal_tab import settings
 # HOME
 
 def home(request):
+    if request.method == 'POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        phone = request.POST['phone']
+        user_message = request.POST['user_message']
+        message = "Hello, \n" + ' ' + '\n' + name + " just filled out the contact us form, you can get in touch with " + name + " through the details he provided below if there's a need.\n " + ' ' + '\n' + "Name: " + name + '\n' + "Email: " +  email + '\n' + "Phone Number: " +  phone  + '\n' + "Message: " + user_message  
+        subject = "New Contact Form Entry From " + name
+        send_mail(
+            subject,
+            message,
+            email,
+            ['adebimpehabeeb10@gmail.com'],
+            fail_silently=False
+
+        )
     promos = Product.objects.filter(has_discount=True)
     populars = Product.objects.filter(is_featured=True)
     breakfasts = Breakfast.objects.all()
