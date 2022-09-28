@@ -26,5 +26,4 @@ run "python manage.py loaddata data.json" to populate the database with some dat
 run "python manage.py runserver" to start the default local server
 
 visit "localhost:8000" or copy the url printed out on your cli to visit the web app 
-run
 
