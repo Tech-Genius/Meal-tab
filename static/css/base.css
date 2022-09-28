@@ -409,10 +409,10 @@ input:-webkit-autofill:active{
 	font-size: 16px;
 	line-height: 24px;
 	position: relative;
-	color: #3C4142;	
+	color: ghostwhite;	
 	display: grid;
 	grid-template-columns: 1.8fr 1fr 1fr;
-	background: #141516;
+    background: linear-gradient(rgba(2, 21, 68, 0.9),rgba(1, 8, 29, 0.9), rgba(1, 8, 29, 0.9),rgba(1, 8, 29, 0.9));
 
 }
 .footer h3{
@@ -423,9 +423,10 @@ input:-webkit-autofill:active{
 	letter-spacing: 1px;
 }
 .footer a{
-	color: #3C4142;	
+	color: ghostwhite;	
 	text-decoration: none;
 	margin-top: 0;
+	cursor: pointer;
 }
 .footer a:hover{
 	color: #f26522;

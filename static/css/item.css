@@ -44,8 +44,7 @@
 }
 
 .item_box button{
-    background: 
-    #f26522;
+    background: linear-gradient(#f15005ee, #832b03);
    color: white;
    padding: 12px 40px;
    outline: none;
@@ -59,8 +58,7 @@
 }
 
 .item_box button:hover{
-    background: 
-    #b43e07;
+opacity: 0.9;
     transition: 1s;   
 }
 

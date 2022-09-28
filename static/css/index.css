@@ -655,8 +655,7 @@
 }
 
 .ad_lead_to_categories button {
-    background:
-        #f26522;
+    background: linear-gradient(#f15005ee, #832b03);
     color: white;
     padding: 15px 45px;
     outline: none;
@@ -670,9 +669,9 @@
 }
 
 .ad_lead_to_categories button:hover {
-    background:
-        #b43e07;
-    transition: 1s;
+    transition: 5s;
+    background: linear-gradient(rgba(2, 21, 68, 0.9), rgba(1, 8, 29, 0.9));
+
 }
 
 
@@ -816,8 +815,7 @@
 
 
 .popular_text button {
-    background:
-        #f26522;
+    background: linear-gradient(#f15005ee, #832b03);
     color: white;
     padding: 10px 30px;
     outline: none;
@@ -831,8 +829,7 @@
 }
 
 .popular_text button:hover {
-    background:
-        #b43e07;
+opacity: 0.8;
     transition: 1s;
 }
 
@@ -858,7 +855,7 @@
     padding: 10px 15px;
     border-radius: 50%;
     font-size: 20px;
-    background-color: #f26522;
+    background: linear-gradient(#f15005ee, #832b03);
     color: white;
     cursor: pointer;
 }
