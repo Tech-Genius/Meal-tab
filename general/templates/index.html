@@ -524,8 +524,8 @@
             <div class="contact-background1">
     
     
-    
-                {% if message_name %}
+    {% if name %}
+                <div class="contact_box_for_filled_form_wrapper">
                 <div class="contact_box_for_filled_form" data-aos="zoom-in-down" data-aos-duration="1000"
                     data-aos-delay="500">
                     <div class="box" id="img">
@@ -533,15 +533,17 @@
                     </div>
     
                     <div class="box" id="text">
-                        <h3> Hello {{message_name}}, your Request for Table Reservation have been noted by our staffs, we'll
-                            get in
-                            touch with you soon, <br> Thank You.</h3>
-                        <a href="{% url 'shop' %}"><button>Go To Shop <i class="fa fa-cart-plus" aria-hidden="true"></i> </button></a>
+                        <h3> Hello {{name}},Your message have been noted by the management, we'll get in touch with you shortly
+                  <br> Thank You.</h3>
+                  <div class="contact_form_filled_buttons">
+                   <button id="cancel_contact_form_overlay">Close <i class="fa fa-times" aria-hidden="true"></i> </button>
+                 </div>
                     </div>
     
                 </div>
+            </div>
     
-                {% else %}
+           {% endif %}     
     
     
     
@@ -628,7 +630,6 @@
     
     
     
-                {% endif %}
             </div>
     
 

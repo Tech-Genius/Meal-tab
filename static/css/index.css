@@ -1219,15 +1219,23 @@
 
 /*  */
 
+.contact_box_for_filled_form_wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(1, 8, 29, 0.9), #b43e07, rgba(1, 8, 29, 0.9));
+    top: 0;
+}
+
 
 
 .contact_box_for_filled_form .box img {
-    height: 280px;
+    height: 250px;
 }
 
 .contact_box_for_filled_form {
     text-align: center;
-    padding-top: 40px;
+    padding-top: 100px;
     color: white;
 }
 

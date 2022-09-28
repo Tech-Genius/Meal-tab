@@ -922,6 +922,11 @@ $(document).ready(function(){
  
 
 
+	  $("#cancel_contact_form_overlay").on('click', function(){
+		$(".contact_box_for_filled_form_wrapper").slideToggle("right")
+	  })
+
+
 
 
 

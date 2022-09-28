@@ -11,12 +11,19 @@ from meal_tab import settings
 # HOME
 
 def home(request):
+    promos = Product.objects.filter(has_discount=True)
+    populars = Product.objects.filter(is_featured=True)
+    breakfasts = Breakfast.objects.all()
+    lunchs = Lunch.objects.all()
+    dinners = Dinner.objects.all()
+    chefs = Chef.objects.all()
+
     if request.method == 'POST':
         name = request.POST['name']
         email = request.POST['email']
         phone = request.POST['phone']
         user_message = request.POST['user_message']
-        message = "Hello, \n" + ' ' + '\n' + name + " just filled out the contact us form, you can get in touch with " + name + " through the details he provided below if there's a need.\n " + ' ' + '\n' + "Name: " + name + '\n' + "Email: " +  email + '\n' + "Phone Number: " +  phone  + '\n' + "Message: " + user_message  
+        message = "Hello, \n" + ' ' + '\n' + name + " just filled out the contact us form, you can get in touch with " + name + " through the details he provided below if there's a need.\n " + ' ' + '\n' + "Name: " + name + '\n' + "Email: " +  email + '\n' + "Phone Number: " +  phone  + '\n' + name + " 's Message: " + user_message  
         subject = "New Contact Form Entry From " + name
         send_mail(
             subject,
@@ -26,21 +33,29 @@ def home(request):
             fail_silently=False
 
         )
-    promos = Product.objects.filter(has_discount=True)
-    populars = Product.objects.filter(is_featured=True)
-    breakfasts = Breakfast.objects.all()
-    lunchs = Lunch.objects.all()
-    dinners = Dinner.objects.all()
-    chefs = Chef.objects.all()
-    context = {
+
+        context = {
         'promos' : promos, 
         'populars' : populars,
         'breakfasts': breakfasts, 
         'lunchs': lunchs,
         'dinners':dinners,
-        'chefs' : chefs
+        'chefs' : chefs,
+        'name': name,
+        'user_message':user_message 
         }
-    return render(request, 'index.html', context)
+
+        return render(request, 'index.html', context)
+    else:
+        context = {
+        'promos' : promos, 
+        'populars' : populars,
+        'breakfasts': breakfasts, 
+        'lunchs': lunchs,
+        'dinners':dinners,
+        'chefs' : chefs,
+         }
+        return render(request, 'index.html', context)    
 
 
 # search
@@ -59,7 +74,7 @@ def search(request):
 
 
 
-# reservation
+# event reservation
 
 def event_reservation(request):
     if request.method == 'POST':
@@ -98,6 +113,10 @@ def event_reservation(request):
     else:
         return render (request, 'event-reservation.html', {})   
 
+
+
+
+# tabe reservation
 
 def table_reservation(request):
 
