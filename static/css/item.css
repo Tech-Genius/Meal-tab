@@ -49,7 +49,7 @@
    padding: 12px 40px;
    outline: none;
    border: none;
-   border-radius: 5px;
+   border-radius: 0px 5px 5px 0px;
    cursor: pointer;
    font-size: 14px;
    font-family: 'Heebo', sans-serif;
@@ -61,7 +61,26 @@
 opacity: 0.9;
     transition: 1s;   
 }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height:auto;
+  opacity: 1;
+ 
+}
 
+
+.item_number{
+    border: 1px solid #f26522;
+    width: fit-content !important;
+    border-radius: 5px 5px 0px 5px;
+    display: flex;
+}
+.item_number input{
+    border: none;
+    outline: none;
+    width: 50px;
+
+}
 
 
 
@@ -177,4 +196,13 @@ opacity: 0.9;
         margin: 30px 50px;
     }
 
+}
+
+@media screen and (max-width:380px){
+    .item_box button{
+        padding: 12px 20px;
+    }
+    .item_number input{
+        width: 30px;
+    }
 }

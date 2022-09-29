@@ -7,56 +7,6 @@
 
 
 
-$(document).ready(function(){
-	$(".breakfast").on('click', function(){
-
-        $(".lunch").css("border-bottom", "none")
-		$(".dinner").css("border-bottom", "none")
-		$(".breakfast").css("border-bottom", "2px solid #f26522")
-		$("#lunch").hide();
-		$("#dinner").hide();
-		$('#breakfast').show();
-		$("#breakfast").css("display", "grid");
-	
-	  
-	})
-
-
-
-
-
-
-    $(".lunch").on('click', function(){
-        
-        
-        $(".breakfast").css("border-bottom", "none")
-		$(".dinner").css("border-bottom", "none")
-		$(".lunch").css("border-bottom", "2px solid #f26522")
-        $("#breakfast").hide();
-		$("#dinner").hide();
-		$("#lunch").show();
-		$("#lunch").css("display", "grid");
-    //    $(".packer, .foot_packer").fadeOut("slow");
-    //    $(".list_box").toggle("slow");
-    //   //  $(".head_side").css("padding-top", "200px");
-      
-   })
-
-
-   $(".dinner").on('click', function(){
-
-	$(".breakfast").css("border-bottom", "none")
-	$(".lunch").css("border-bottom", "none")
-	$(".dinner").css("border-bottom", "2px solid #f26522")    
-	$("#breakfast").hide();
-	$("#lunch").hide();
-	$('#dinner').show();
-	$("#dinner").css("display", "grid");
-
-  
-})
-      });
- 
 
 
 
@@ -958,9 +908,6 @@ $(document).ready(function(){
 	});
 
 	
-
-
-
 
 
 

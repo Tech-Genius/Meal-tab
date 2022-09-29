@@ -3,7 +3,7 @@
 
 /* phone_number_country_flag */
 
-.iti__flag {
+/* .iti__flag {
 	background-image: url("path/to/flags.png");
 }
 
@@ -12,7 +12,7 @@
 	.iti__flag {
 		background-image: url("path/to/flags@2x.png");
 	}
-}
+} */
 
 /* phone_number_country_flag */
 
@@ -143,6 +143,45 @@ ul#nav li a:active {
 	display: none;
 	position: relative;
 }
+
+
+
+
+
+
+/* cart */
+
+
+#cart{
+	display: flex;
+	 position: relative;
+	 padding: 0;
+	 justify-content: space-between;
+}
+#cart i {
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+#cart .cart-amount{
+	margin-top: 0;
+	padding: 0;
+	position: absolute;
+	 top: 0; 
+	 right: 0 !important;	 
+}
+
+
+/* cart */
+
+
+
+
+
+
+
+
+
 
 /* Dropdown */
  .dropdown:hover .dropdown-menu{
@@ -467,7 +506,7 @@ input:-webkit-autofill:active{
 
 
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:950px) {
 
    /* header styles */
 
@@ -577,7 +616,7 @@ input:-webkit-autofill:active{
 	}
 	#nav-wrap ul#nav li a {
 		display: block;
-		width: auto;
+		width: max-content;
 		padding: 0;
 		padding: 12px 0;
 		line-height: 10px;
@@ -610,9 +649,12 @@ input:-webkit-autofill:active{
 	}
 	ul.dropdown-menu-account li a{
 		line-height: 5px !important;
+		width: 100% !important;
+		text-align: center !important;
 	}
 	ul.dropdown-menu li a{
 		line-height: 5px !important;
+		width: 100% !important;
 	}
 }
 
