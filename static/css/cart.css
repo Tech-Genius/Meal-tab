@@ -155,3 +155,18 @@ opacity: 0.9;
     transition: 1s;   
 }
     
+
+
+
+@media screen and (max-width:630px){
+    .cart_wrapper{
+        width: 95%;
+    }
+}
+
+
+@media screen and (max-width:550px){
+    #prd_qty input{
+        width: 50px;
+    }
+}
