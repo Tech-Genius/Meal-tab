@@ -1,0 +1,110 @@
+<style>
+    #cart {
+        /* color: #f26522 !important; */
+        border-radius: 5px;
+        background: linear-gradient(#f15005ee, #832b03);
+        width: fit-content !important;
+        padding-left: 15px !important;
+        padding-bottom: 15px !important;
+        padding-top: 15px !important;
+        box-shadow: 3px 3px 3px rgb(10, 8, 8);
+        padding-right: 25px !important;
+    }
+
+    #cart:hover {
+        color: white !important;
+        border: 1px solid #f26522;
+        background: transparent;
+        transition: 1s;
+    }
+
+    #cart .cart-amount {
+        margin-right: 16px;
+
+    }
+</style>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Meal-tab🥄 | Your Cart{% endblock %}
+{% block content %}
+
+<div class="color"></div>
+
+<div class="cart_page_wrapper" id="cartList">
+    <div class="cart_wrapper">
+        <div class="cart_number">
+            <h3>Cart ({{totalitems}})</h3>
+        </div>
+        <div class="cart_inner_wrapper">
+
+            <div class="cart_box_wrapper"  id="heading">
+                <div class="cart_box">
+                    <h3>Item</h3>
+                </div>
+                <div class="cart_box">
+                    <h3>Quantity</h3>
+                </div>
+                <div class="cart_box">
+                    <h3>Price</h3>
+                </div>
+                <div class="cart_box">
+                    <h3>Total</h3>
+                </div>
+            </div>
+
+            {% for product_id,item in cart_data.items %}
+            <div class="cart_box_wrapper" id="cart_items">
+                <div class="cart_box">
+
+
+                    <img src="media/{{item.image}}" />
+
+                    <a href="">
+                        <h3>{{item.title}}</h3>
+                    </a>
+
+
+                </div>
+                <div class="cart_box" style="display: flex;">
+                    <input type="number" class="product-qty-{{product_id}}" value="{{item.qty}}" >
+                    <div class="cart_icons" style="cursor: pointer;">
+                        <i class="fa fa-sync" id="update-item" data-item="{{product_id}}"></i>
+                        <i class="fa fa-trash" id="delete-item" data-item="{{product_id}}"></i>
+                    </div>
+                </div>
+                <div class="cart_box">
+                    <h3>{{item.price}}</h3>
+                </div>
+                <div class="cart_box">
+                    <h3>{% widthratio item.price 1 item.qty %}</h3>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+            <div class="total">
+                <div class="total_box">Total:</div>
+                <div class="total_box">{{total_amt}}</div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+    {% endblock %}

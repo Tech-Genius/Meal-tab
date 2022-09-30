@@ -48,40 +48,39 @@
                 <h3>Discount: {{product.percentage_off}}%</h3>
                 <h3>New Price: &#8358;{{product.price}}</h3>
                 <div class="item_number">
-                    <input type="number" value="1" name="number"  id="productQty">
-                    <!-- <input type="hidden" class="product-image-{{data.id}}" value="{{data.image}}" /> -->
+                    <input type="number" value="1" name="number" id="productQty">
+                    <input type="hidden" class="product-image" value="{{product.image}}" />
                     <input type="hidden" class="product-id" value="{{product.id}}" />
                     <input type="hidden" class="product-title" value="{{product.title}}" />
                     <input type="hidden" class="product-price" value="{{product.price}}" />
-                   <button id="add_to_cart_btn">Add to Cart <i class="fa fa-cart-plus"></i></button>
+                    <button id="add_to_cart_btn">Add to Cart <i class="fa fa-cart-plus"></i></button>
                 </div>
             </div>
-            </div>
-            </div>
-
-
-
-            {% else %}
-            <div class="content">
-
-                <h3>Product Name: {{product.title}}</h3>
-                <h3>Price: &#8358;{{product.price}}</h3>
-
-                <div class="item_number">
-                    <input type="number" value="1" name="number"  id="productQty">
-                    <!-- <input type="hidden" class="product-image-{{data.id}}" value="{{data.image}}" /> -->
-                    <input type="hidden" class="product-id" value="{{product.id}}" />
-                    <input type="hidden" class="product-title" value="{{product.title}}" />
-                    <input type="hidden" class="product-price" value="{{product.price}}" />
-                   <button id="add_to_cart_btn">Add to Cart <i class="fa fa-cart-plus"></i></button>
-                </div>
-            </div>
-
-            {% endif %}
         </div>
     </div>
 
+
+
+    {% else %}
+    <div class="content">
+
+        <h3>Product Name: {{product.title}}</h3>
+        <h3>Price: &#8358;{{product.price}}</h3>
+
+        <div class="item_number">
+            <input type="number" value="1" name="number" id="productQty">
+            <input type="hidden" class="product-image" value="{{product.image}}" />
+            <input type="hidden" class="product-id" value="{{product.id}}" />
+            <input type="hidden" class="product-title" value="{{product.title}}" />
+            <input type="hidden" class="product-price" value="{{product.price}}" />
+            <button id="add_to_cart_btn">Add to Cart <i class="fa fa-cart-plus"></i></button>
+        </div>
+
+        {% endif %}
+    </div>
 </div>
+</div>
+
 
 
 

@@ -16,6 +16,7 @@
    <link rel="stylesheet" href="{% static 'css/shop.css' %}">
    <link rel="stylesheet" href="{% static 'css/search.css' %}">
    <link rel="stylesheet" href="{% static 'css/item.css' %}">
+   <link rel="stylesheet" href="{% static 'css/cart.css' %}">
    <!-- <link rel="stylesheet" href="{% static 'intl-tel-input-17.0.19/build/css/intlTelInput.css' %}"> -->
    <link rel="stylesheet" href="{% static 'css/reservations.css'%}">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -104,7 +105,7 @@
                </li>
 
                <li>
-                  <a href="{% url 'shop' %}" id="cart">
+                  <a href="{% url 'cart_view' %}" id="cart">
 
                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
                      <p class="cart-amount">{{request.session.cartdata|length}}</p>
@@ -183,7 +184,7 @@
 
 
                <li>
-                  <a href="{% url 'shop' %}" id="cart">
+                  <a href="{% url 'cart_view' %}" id="cart">
                      
                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
                      <p class="cart-amount">(<span class="cart_item_total">{{request.session.cartdata|length}}</span>)</p>
