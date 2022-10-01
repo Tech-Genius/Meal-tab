@@ -4,6 +4,8 @@ from django.shortcuts import render, redirect
 from . models import *
 from . forms import *
 from django.contrib.auth import login, authenticate, logout
+from django.http import HttpResponseRedirect
+from meal_tab import settings
 
 
 # Create your views here.
@@ -35,7 +37,10 @@ def signin(request):
 
         if user is not None:
             login(request, user)
-            return redirect('shop')
+            if request.GET.get('next', False):
+                return HttpResponseRedirect(request.GET.get('next'))
+            else:
+                return redirect(settings.LOGIN_REDIRECT_URL)
         else:
             messages.error(request,'Ooops! The details you entered do not match')
     context = {} 

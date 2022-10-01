@@ -4,12 +4,13 @@ from . models import *
 from django.db.models import Q
 from django.http import JsonResponse, HttpResponse
 from django.template.loader import render_to_string
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 
 
-def shop(request):
+def all_items(request):
     categories = Category.objects.all()
     products = Product.objects.all()
     context = {'data': products, 'categories': categories}
@@ -137,3 +138,16 @@ def update_cart_item(request):
 		total_amt+=int(item['qty'])*float(item['price'])
 	t=render_to_string('ajax/cart-after-delete-and-update.html',{'cart_data':request.session['cartdata'],'totalitems':len(request.session['cartdata']),'total_amt':total_amt})
 	return JsonResponse({'data':t,'totalitems':len(request.session['cartdata'])})
+
+
+
+
+#checkout
+@login_required
+def checkout(request):
+	total_amt=0
+	if 'cartdata' in request.session:
+		for p_id,item in request.session['cartdata'].items():
+			total_amt+=int(item['qty'])*float(item['price'])
+		return render(request, 'checkout.html',{'cart_data':request.session['cartdata'],'totalitems':len(request.session['cartdata']),'total_amt':total_amt})
+	

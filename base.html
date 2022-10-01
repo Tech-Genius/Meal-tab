@@ -101,14 +101,15 @@
 
                <li><a href="{% url 'home' %}" id="home">Home.</a></li>
 
-               <li> <a href="{% url 'shop' %}" id="shop">Shop</a>
+               <li> <a href="{% url 'all-items' %}" id="shop">Shop</a>
                </li>
 
                <li>
                   <a href="{% url 'cart_view' %}" id="cart">
-
+                     
                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                     <p class="cart-amount">{{request.session.cartdata|length}}</p>
+                     <p class="cart-amount">(<span class="cart_item_total">{{request.session.cartdata|length}}</span>)</p>
+                 
                   </a>
 
                </li>
@@ -179,7 +180,7 @@
 
                <li><a href="{% url 'home' %}" id="home">Home.</a></li>
 
-               <li> <a href="{% url 'shop' %}" id="shop">Shop </a>
+               <li> <a href="{% url 'all-items' %}" id="shop">Shop </a>
                </li>
 
 

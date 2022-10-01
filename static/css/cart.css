@@ -46,8 +46,8 @@ font-size: 25px;
 
 .cart_box_wrapper{
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
-    padding: 20px ;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* padding: 20px; */
     border-bottom: 1px solid #f26522;
     text-align: center;
     justify-content: center;
@@ -57,10 +57,14 @@ font-size: 25px;
     border: 1px solid transparent;
     text-align: center;
     width: 100%;
-    margin-top: 20px;
+    padding: 20px 0px;
     /* background-image: linear-gradient(white, white), linear-gradient(315deg,#833ab4, #fd1d1d 50%, #fcb045 );
 background-origin: border-box;
 background-clip: content-box, border-box; */
+border-left: 1px solid #07315B;
+}
+.cart_inner_wrapper:first-child{
+    border: none !important;
 }
 
 .cart_box img{
@@ -77,10 +81,19 @@ font-size: 17px;
 
 
 #have_margin{
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 #prd_qty{
-    margin-top: 25px;
+    /* margin-top: 25px; */
+   
+}
+.qty_times_amt{
+    display: flex;
+    justify-content: center;
+}
+.qty_times_amt h3, .qty_times_amt input{
+    margin-left: 5px;
+    margin-right: 5px;
 }
 #prd_qty input{
 height: 30px;
@@ -93,7 +106,9 @@ border: 1px;
 border-radius: 5px;
 text-align: center;
 font-size: 13px;
+width: 50px;
 }
+
 #prd_qty i{
     font-size: 15px;
     margin: 3px 5px;
@@ -159,13 +174,11 @@ opacity: 0.9;
 
 @media screen and (max-width:630px){
     .cart_wrapper{
-        width: 95%;
+        width: 97%;
+    }
+    .cart_box_wrapper{
+        grid-template-columns: 1fr 2fr 1fr;
     }
 }
 
 
-@media screen and (max-width:550px){
-    #prd_qty input{
-        width: 50px;
-    }
-}
