@@ -19,8 +19,6 @@
     -moz-box-shadow: 2px 6px 23px 9px rgba(189,179,189,1);
     box-shadow: 2px 6px 23px 9px rgba(189,179,189,1);
     border-radius: 10px;
-    overflow: scroll;
-    max-height: 500px;
     padding-bottom: 50px;
 }
 
@@ -59,6 +57,7 @@ font-size: 25px;
     border: 1px solid transparent;
     text-align: center;
     width: 100%;
+    margin-top: 20px;
     /* background-image: linear-gradient(white, white), linear-gradient(315deg,#833ab4, #fd1d1d 50%, #fcb045 );
 background-origin: border-box;
 background-clip: content-box, border-box; */
