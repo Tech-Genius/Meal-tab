@@ -50,7 +50,7 @@ def signin(request):
 
 def userlogout(request):
     logout(request)
-    return redirect('login')
+    return redirect(settings.LOGOUT_REDIRECT_URL)
 
 
         

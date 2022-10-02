@@ -43,7 +43,8 @@
          <div class="logo">
             <div class="header">
                <a href="{% url 'home' %}">
-                  <h3 style="color: white;">Meal-tab🥄</h3>
+                  
+                  <h3 style="color: white;" class="k"><span class="large">Meal-tab🥄</span> <i class="fa fa-home small"></i></h3>
                </a>
             </div>
          </div>
@@ -68,8 +69,30 @@
          </div>
 
          {% if user.is_authenticated %}
+    
+
+
+         <div class="small_sreen_cart">
+           
+            <a href="{% url 'cart_view' %}" id="cart_sm_screen">
+
+               <i class="fa fa-cart-plus" aria-hidden="true"></i>
+               <p class="cart-amount">(<span class="cart_item_total">{{request.session.cartdata|length}}</span>)</p>
+
+            </a>
+
+
+         </div>
+
+
+
 
          <nav id="nav-wrap">
+
+
+
+
+
 
             <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
                <span class='menu-text'>Show Menu</span>
@@ -101,15 +124,16 @@
 
                <li><a href="{% url 'home' %}" id="home">Home.</a></li>
 
-               <li> <a href="{% url 'all-items' %}" id="shop">Shop</a>
+               <li> <a href="{% url 'shop' %}" id="shop">Shop.</a>
                </li>
 
-               <li>
+               <li id="cart_li">
                   <a href="{% url 'cart_view' %}" id="cart">
-                     
+
                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                     <p class="cart-amount">(<span class="cart_item_total">{{request.session.cartdata|length}}</span>)</p>
-                 
+                     <p class="cart-amount">(<span class="cart_item_total">{{request.session.cartdata|length}}</span>)
+                     </p>
+
                   </a>
 
                </li>
@@ -148,6 +172,26 @@
          {% else %}
 
 
+
+         
+
+         <div class="small_sreen_cart">
+           
+            <a href="{% url 'cart_view' %}" id="cart_sm_screen">
+
+               <i class="fa fa-cart-plus" aria-hidden="true"></i>
+               <p class="cart-amount">(<span class="cart_item_total">{{request.session.cartdata|length}}</span>)</p>
+
+            </a>
+
+  
+
+
+
+      </div>
+
+
+
          <nav id="nav-wrap">
 
             <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
@@ -180,16 +224,17 @@
 
                <li><a href="{% url 'home' %}" id="home">Home.</a></li>
 
-               <li> <a href="{% url 'all-items' %}" id="shop">Shop </a>
+               <li> <a href="{% url 'shop' %}" id="shop">Shop </a>
                </li>
 
 
-               <li>
+               <li id="cart_li">
                   <a href="{% url 'cart_view' %}" id="cart">
-                     
+
                      <i class="fa fa-cart-plus" aria-hidden="true"></i>
-                     <p class="cart-amount">(<span class="cart_item_total">{{request.session.cartdata|length}}</span>)</p>
-                 
+                     <p class="cart-amount">(<span class="cart_item_total">{{request.session.cartdata|length}}</span>)
+                     </p>
+
                   </a>
 
                </li>

@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 
 
 
-def all_items(request):
+def shop(request):
     categories = Category.objects.all()
     products = Product.objects.all()
     context = {'data': products, 'categories': categories}
@@ -150,4 +150,7 @@ def checkout(request):
 		for p_id,item in request.session['cartdata'].items():
 			total_amt+=int(item['qty'])*float(item['price'])
 		return render(request, 'checkout.html',{'cart_data':request.session['cartdata'],'totalitems':len(request.session['cartdata']),'total_amt':total_amt})
+	else:
+		return render(request, 'checkout.html',{'cart_data':'','totalitems':0,'total_amt':total_amt})
+
 	

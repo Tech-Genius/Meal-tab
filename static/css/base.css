@@ -79,6 +79,10 @@ header {
 	box-shadow: 3px 3px 3px rgb(10, 8, 8);
 }
 
+.header .small{
+	display: none;
+}
+
 /* primary navigation
 --------------------------------------------------------------------- */
 #nav-wrap, #nav-wrap ul, #nav-wrap li, #nav-wrap a {
@@ -172,6 +176,30 @@ ul#nav li a:active {
 }
 
 
+
+
+#cart_sm_screen{
+	display: flex;
+	 position: relative;
+	 padding: 0;
+	 justify-content: space-between;
+}
+#cart_sm_screen i {
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+#cart_sm_screen .cart-amount{
+	margin-top: 0;
+	padding: 0;
+	position: absolute;
+	 top: 0; 
+	 right: 0 !important;	 
+}
+
+
+
+
 /* cart */
 
 
@@ -261,6 +289,30 @@ ul.dropdown-menu-account li a{
 
 
 /* Dropdown End */
+
+
+
+
+
+/* small_sreen_acc_cart */
+.small_sreen_acc_cart{
+	display: none;
+}
+
+/* small_sreen_acc_cart */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*       */
@@ -512,10 +564,96 @@ input:-webkit-autofill:active{
 
    .header-inner{
 	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-columns:1fr 1fr 1fr !important;
+	display: none ;
 }
 
 
+
+  .header{
+	padding: 10px 0px;
+	width: 100%;
+		position: relative !important;
+		left: auto ;
+		top: 0 !important;
+		
+	}
+
+.header .large{
+	display: none;
+}
+
+.header .small{
+	display: block;
+	font-size: 55px;
+}
+
+#cart_li{
+	display: none !important;
+}
+
+
+/* small_sreen_acc_cart */
+.small_sreen_cart{
+	width: fit-content;
+	padding-top: 23px !important;
+	justify-self: center;
+}
+
+.small_sreen_cart a{
+	color: white;
+}
+
+
+.small_sreen_cart #cart_sm_screen{
+	display: flex;
+	 position: relative;
+	 padding: 0;
+}
+.small_sreen_cart #cart_sm_screen i {
+	margin-right: 24px;
+}
+
+.small_sreen_cart #cart_sm_screen .cart-amount{
+	margin-top: 0;
+	padding: 0;
+	position: absolute;
+	 top: 0; 
+	 right: 0 !important;	 
+}
+
+
+
+
+
+/* nav-wrap */
+
+
+
+
+
+
+.small_sreen_cart a i{
+	font-size: 38px !important;
+}
+.small_sreen_cart a:hover {
+	color: #f26522;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* small_sreen_acc_cart */
 	
 
 	header .logo a { margin-right: 0; }

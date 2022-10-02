@@ -80,13 +80,11 @@ font-size: 17px;
 }
 
 
-#have_margin{
-    /* margin-top: 30px; */
+#cart_items_title{
+border: none;
 }
-#prd_qty{
-    /* margin-top: 25px; */
-   
-}
+
+
 .qty_times_amt{
     display: flex;
     justify-content: center;
@@ -129,13 +127,13 @@ width: 50px;
 
 .total{
     display: grid;
-    justify-content: end;
+    justify-content: center;
     border-bottom: 1px solid #f26522;
-padding-bottom: 25px;
+padding: 25px 0px;
 }
-.total .total_box{
+/* .total .total_box{
     margin-right: 70px;
-}
+} */
 
 .total h3{
     color: #07315B;
@@ -169,6 +167,15 @@ opacity: 0.9;
     transition: 1s;   
 }
     
+
+
+
+
+
+
+
+
+
 
 
 

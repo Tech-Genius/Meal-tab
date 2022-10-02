@@ -4,8 +4,8 @@
     </div>
     <div class="cart_inner_wrapper">
 
-        <div class="cart_box_wrapper"  id="heading">
-            <div class="cart_box">
+        <div class="cart_box_wrapper" id="heading">
+            <div class="cart_box" id="cart_items_title">
                 <h3>Item</h3>
             </div>
             <div class="cart_box">
@@ -18,7 +18,7 @@
 
         {% for product_id,item in cart_data.items %}
         <div class="cart_box_wrapper" id="cart_items">
-            <div class="cart_box">
+            <div class="cart_box" id="cart_items_title">
 
 
                 <img src="media/{{item.image}}" />
@@ -30,13 +30,13 @@
 
             </div>
             <div class="cart_box" id="prd_qty">
-              <div class="qty_times_amt">
-                <h3>&#8358;{{item.price}} *  </h3> 
-                <input type="number" class="product-qty-{{product_id}}" value="{{item.qty}}" >
-              </div>
+                <div class="qty_times_amt">
+                    <h3>&#8358;{{item.price}} * </h3>
+                    <input type="number" class="product-qty-{{product_id}}" value="{{item.qty}}">
+                </div>
                 <div class="cart_icons" style="cursor: pointer;">
-                    <i class="fa fa-sync" id="update-item" data-item="{{product_id}}"></i>
                     <i class="fa fa-trash" id="delete-item" data-item="{{product_id}}"></i>
+                    <i class="fa fa-sync" id="update-item" data-item="{{product_id}}"></i>
                 </div>
             </div>
 
@@ -53,7 +53,8 @@
 
         <div class="total" id="have_margin">
             <h3 class="total_box">Total = <span>&#8358;{{total_amt}}</span></h3>
-            <a href="{% url 'checkout' %}"><button id="checkout_btn">Checkout <i class="fa fa-credit-card"></i></button></a>
+            <a href="{% url 'checkout' %}"><button id="checkout_btn">Checkout <i
+                        class="fa fa-credit-card"></i></button></a>
         </div>
 
 
