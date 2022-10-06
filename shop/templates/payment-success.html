@@ -1,0 +1,64 @@
+<style>
+    #cart {
+        /* color: #f26522 !important; */
+        border-radius: 5px;
+        background: linear-gradient(#f15005ee, #832b03);
+        width: fit-content !important;
+        padding-left: 15px !important;
+        padding-bottom: 15px !important;
+        padding-top: 15px !important;
+        box-shadow: 3px 3px 3px rgb(10, 8, 8);
+        padding-right: 25px !important;
+    }
+
+    #cart:hover {
+        color: white !important;
+        border: 1px solid #f26522;
+        background: transparent;
+        transition: 1s;
+    }
+
+    #cart .cart-amount {
+        margin-right: 16px;
+
+    }
+
+    /* sm screen */
+
+    #cart_sm_screen{
+	color: #f26522 !important;
+}
+/*  */
+
+</style>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} Meal-tab🥄 | Your Cart{% endblock %}
+{% block content %}
+
+<div class="color"></div>
+
+<div class="cart_page_wrapper" id="cartList">
+    <div class="reserve_box_for_filled_form" data-aos="zoom-in-down" data-aos-duration="1000" data-aos-delay="500">
+        <div class="box" id="img">
+            <img src="{% static 'images/password-reset-complete.png' %}" alt="">
+        </div>
+
+        <div class="box" id="text">
+    <h3 style="color:#07315B ;">Your Payment Was Successful</h3>
+    <a href="{% url 'shop' %}"><button>Go To Shop <i class="fa fa-cart-plus" aria-hidden="true"></i> </button></a>
+              
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+{% endblock %}

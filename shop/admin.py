@@ -11,4 +11,14 @@ admin.site.register(Product, ProductAdmin)
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('title','image_tag')
-admin.site.register(Category, CategoryAdmin)  
+admin.site.register(Category, CategoryAdmin) 
+
+# Order
+class CartOrderAdmin(admin.ModelAdmin):
+	list_editable=('paid_status','order_status')
+	list_display=('user','total_amt','paid_status','order_dt','order_status')
+admin.site.register(CartOrder,CartOrderAdmin)
+
+class CartOrderItemsAdmin(admin.ModelAdmin):
+	list_display=('invoice_no','item','image_tag','qty','price','total')
+admin.site.register(CartOrderItems,CartOrderItemsAdmin)

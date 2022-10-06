@@ -34,6 +34,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'jet.dashboard',
+    'jet',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
     'general',
     'account',
     'shop',
+    'paypal.standard.ipn'
 ]
 
 MIDDLEWARE = [
@@ -134,6 +137,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'shop'
 LOGOUT_REDIRECT_URL='login'
+PAYPAL_RECIEVER_EMAIL = 'sb-beqsk21447561@business.example.com'
+PAYPAL_TEST = True
 
 
 

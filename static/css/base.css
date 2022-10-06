@@ -295,7 +295,7 @@ ul.dropdown-menu-account li a{
 
 
 /* small_sreen_acc_cart */
-.small_sreen_acc_cart{
+.small_sreen_cart{
 	display: none;
 }
 
@@ -598,6 +598,7 @@ input:-webkit-autofill:active{
 	width: fit-content;
 	padding-top: 23px !important;
 	justify-self: center;
+	display: block;
 }
 
 .small_sreen_cart a{
