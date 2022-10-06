@@ -1,4 +1,3 @@
-from email.policy import default
 from django.db import models
 from django.utils.html import mark_safe
 from general.models import Promo
@@ -38,12 +37,7 @@ class Product(models.Model):
     category = models.ManyToManyField(Category, related_name='category')
     is_featured = models.BooleanField(default=False)
     has_discount = models.BooleanField(default=False)
-    date_discount_created =  models.DateField(blank=False, default=datetime)
-    date_discount_end =  models.DateField(blank=False)
-    discount_days_left = property(
-         lambda self:
-         (self.date_discount_end - self.date_discount_created)
-         )
+    discount_days_left = models.PositiveIntegerField(default=0)
     percentage_off = models.PositiveIntegerField(default=0)
     price_before_discount = models.PositiveIntegerField(default=0)
 
