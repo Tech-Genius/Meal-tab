@@ -154,4 +154,3 @@ EMAIL_HOST_USER = 'official.mealtab@gmail.com'
 EMAIL_HOST_PASSWORD = 'kvvyjdrcizgknmgz'
 
 #Activate Django-heroku.
-django_heroku.settings(locals())
