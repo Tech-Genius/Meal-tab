@@ -28,8 +28,8 @@ SECRET_KEY = 'django-insecure-(fw9_l3f0gz@334&jb!nrcv$@y_#xm%3j6orvbziyf@z2@$wlh
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['meal-tab.up.railway.app', '127.0.0.1','localhost']
-CSRF_TRUSTED_ORIGINS = ['https://meal-tab.up.railway.app']
+ALLOWED_HOSTS = ['meali-tab.up.railway.app', '127.0.0.1','localhost']
+CSRF_TRUSTED_ORIGINS = ['https://meali-tab.up.railway.app']
 
 
 # Application definition
