@@ -1,1 +1,1 @@
-web: gunicorn meal_tab.wsgi
+web: gunicorn 'meal_tab.wsgi'
