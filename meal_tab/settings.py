@@ -29,7 +29,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['meal-tabs.up.railway.app', '127.0.0.1','localhost']
 CSRF_TRUSTED_ORIGINS = ['https://meal-tabs.up.railway.app']
 
-
 # Application definition
 
 INSTALLED_APPS = [
