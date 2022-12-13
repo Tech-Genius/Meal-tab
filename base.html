@@ -17,6 +17,10 @@
    <link rel="stylesheet" href="{% static 'css/search.css' %}">
    <link rel="stylesheet" href="{% static 'css/item.css' %}">
    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+   <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon_io/apple-touch-icon.png' %}">
+   <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_io/favicon-32x32.png' %}">
+   <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_io/favicon-16x16.png' %}">
+   <link rel="manifest" href="{% static 'favicon_io/site.webmanifest' %}">
    <!-- <link rel="stylesheet" href="{% static 'intl-tel-input-17.0.19/build/css/intlTelInput.css' %}"> -->
    <link rel="stylesheet" href="{% static 'css/reservations.css'%}">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -43,8 +47,9 @@
          <div class="logo">
             <div class="header">
                <a href="{% url 'home' %}">
-                  
-                  <h3 style="color: white;" class="k"><span class="large">Meal-tab🥄</span> <i class="fa fa-home small"></i></h3>
+
+                  <h3 style="color: white;" class="k"><span class="large">Meal-tab🥄</span> <i
+                        class="fa fa-home small"></i></h3>
                </a>
             </div>
          </div>
@@ -69,11 +74,11 @@
          </div>
 
          {% if user.is_authenticated %}
-    
+
 
 
          <div class="small_sreen_cart">
-           
+
             <a href="{% url 'cart_view' %}" id="cart_sm_screen">
 
                <i class="fa fa-cart-plus" aria-hidden="true"></i>
@@ -173,10 +178,10 @@
 
 
 
-         
+
 
          <div class="small_sreen_cart">
-           
+
             <a href="{% url 'cart_view' %}" id="cart_sm_screen">
 
                <i class="fa fa-cart-plus" aria-hidden="true"></i>
@@ -184,11 +189,11 @@
 
             </a>
 
-  
 
 
 
-      </div>
+
+         </div>
 
 
 
